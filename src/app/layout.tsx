@@ -11,6 +11,10 @@ export const metadata: Metadata = {
   title: "Jagdamb Foods | Authentic Indian Fruit Bars, Candies & Confectionery",
   description: "Manufacturer of premium Fruit Bar Toffees made with real fruit taste and traditional Maharashtrian recipes. Flavours include Mango, Raw Kacchi Keri, Imli, Strawberry, Guava & more. Bulk orders & direct factory supply.",
   keywords: "Jagdamb Foods, Fruit Bar, Aam Papad, Imli Candy, Tamarind Burfi, Mango Candy, Toffee, Peth Naka Confectionery, Wholesale Candies India",
+  icons: {
+    icon: "/images/logo.png",
+    apple: "/images/logo.png",
+  },
   openGraph: {
     title: "Jagdamb Foods - Sweetness with Traditional Taste",
     description: "Premium Indian Fruit Bars, Tamarind Candies, and Traditional Toffees crafted in Maharashtra.",

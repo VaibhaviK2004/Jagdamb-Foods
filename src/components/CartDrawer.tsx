@@ -35,8 +35,14 @@ export const CartDrawer: React.FC = () => {
         <div className="w-screen max-w-md bg-[#FFFDF9] shadow-2xl flex flex-col border-l border-heritage-cardBorder">
           {/* Drawer Header */}
           <div className="px-6 py-5 bg-[#FAF5EC] border-b border-heritage-cardBorder flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <ShoppingBag className="w-5 h-5 text-heritage-crimson" />
+            <div className="flex items-center gap-2.5">
+              <div className="w-8 h-8 rounded-lg overflow-hidden bg-white p-0.5 border border-[#E8DCC4] shrink-0">
+                <img
+                  src="/images/logo.png"
+                  alt="Jagdamb Foods"
+                  className="w-full h-full object-contain"
+                />
+              </div>
               <h2 className="font-serif text-xl font-bold text-heritage-charcoal">
                 Order &amp; Quote Basket
               </h2>

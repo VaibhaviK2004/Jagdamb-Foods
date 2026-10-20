@@ -27,15 +27,24 @@ export const HeritageStory: React.FC = () => {
                 className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
               />
 
-              {/* Traditional Seal Stamp with Floating Animation */}
-              <div className="absolute bottom-4 right-4 bg-heritage-crimson/95 text-white p-4 rounded-xl shadow-2xl border border-heritage-gold/50 backdrop-blur-sm max-w-[210px] animate-gentle-float">
-                <div className="flex items-center gap-1.5 text-heritage-amber text-[10px] uppercase font-bold tracking-widest">
-                  <Sparkles className="w-3 h-3" />
-                  <span>Artisanal Promise</span>
+              {/* Traditional Seal Stamp with Floating Animation & Original Logo */}
+              <div className="absolute bottom-4 right-4 bg-white/95 text-[#2A2521] p-3 rounded-2xl shadow-2xl border-2 border-[#D4A373] backdrop-blur-md flex items-center gap-3 animate-gentle-float">
+                <div className="w-12 h-12 rounded-xl overflow-hidden shrink-0 bg-[#FAF5EC] p-0.5 border border-[#E8DCC4]">
+                  <img
+                    src="/images/logo.png"
+                    alt="Jagdamb Foods Certified Seal"
+                    className="w-full h-full object-contain"
+                  />
                 </div>
-                <p className="font-serif text-sm font-bold mt-1 leading-snug">
-                  Handcrafted with Farm-Fresh Fruits
-                </p>
+                <div>
+                  <div className="flex items-center gap-1 text-[#8B263E] text-[10px] uppercase font-bold tracking-wider">
+                    <Sparkles className="w-3 h-3 text-[#D4A373]" />
+                    <span>Pure Taste</span>
+                  </div>
+                  <p className="font-serif text-xs font-bold leading-tight text-[#2A2521]">
+                    True Tradition Since 2004
+                  </p>
+                </div>
               </div>
             </div>
           </motion.div>

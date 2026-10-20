@@ -39,18 +39,24 @@ export const Footer: React.FC = () => {
 
         {/* 4 Columns Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10">
-          {/* Brand Story */}
+          {/* Brand Story with Original Logo Medallion */}
           <div className="lg:col-span-2 space-y-4">
-            <Link href="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-heritage-crimson flex items-center justify-center text-heritage-amber shadow-md">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
-                  <path d="M12 2C6.5 2 2 6.5 2 12c0 3.5 1.8 6.5 4.5 8.3L12 22l5.5-1.7C20.2 18.5 22 15.5 22 12c0-5.5-4.5-10-10-10z" />
-                  <path d="M12 2v20" />
-                </svg>
+            <Link href="/" className="flex items-center gap-3.5 group">
+              <div className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-white p-1.5 shadow-xl border border-heritage-amber/50 group-hover:border-heritage-amber transition-all group-hover:scale-105 flex items-center justify-center overflow-hidden shrink-0">
+                <img
+                  src="/images/logo.png"
+                  alt="Jagdamb Foods Original Heritage Logo"
+                  className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
+                />
               </div>
-              <span className="font-serif text-2xl font-bold tracking-tight text-white">
-                Jagdamb<span className="text-heritage-amber ml-1">Foods</span>
-              </span>
+              <div className="flex flex-col">
+                <span className="font-serif text-2xl font-bold tracking-tight text-white leading-tight">
+                  Jagdamb<span className="text-heritage-amber ml-1 font-sans font-medium">Foods</span>
+                </span>
+                <span className="text-[10px] uppercase tracking-widest text-[#D4A373] font-semibold mt-0.5">
+                  Pure Taste, True Tradition • Est. 2004
+                </span>
+              </div>
             </Link>
 
             <p className="text-white/70 text-xs sm:text-sm leading-relaxed max-w-sm">

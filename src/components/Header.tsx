@@ -55,31 +55,27 @@ export const Header: React.FC = () => {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
-            {/* Left: Brand Logo & Emblem in Kataria Style */}
+            {/* Left: Brand Logo & Original Emblem in Kataria Style */}
             <Link href="/" className="flex items-center gap-3 group">
-              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#8B263E] flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform duration-300">
-                {/* Traditional Mango Leaf & Sun Emblem */}
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="w-5 h-5 text-heritage-amber"
-                >
-                  <path d="M12 2C6.5 2 2 6.5 2 12c0 3.5 1.8 6.5 4.5 8.3L12 22l5.5-1.7C20.2 18.5 22 15.5 22 12c0-5.5-4.5-10-10-10z" />
-                  <path d="M12 2v20" />
-                  <path d="M12 7c3 1 5 4 5 7" />
-                  <path d="M7 14c0-3 2-6 5-7" />
-                </svg>
+              <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white border border-[#D4A373]/60 p-1 shadow-sm group-hover:shadow-md group-hover:scale-105 transition-all duration-300 flex items-center justify-center overflow-hidden">
+                <img
+                  src="/images/logo.png"
+                  alt="Jagdamb Foods Original Logo"
+                  className="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-300"
+                />
               </div>
               <div className="flex flex-col">
-                <span className="font-serif text-2xl sm:text-2xl font-bold tracking-tight text-[#8B263E] leading-none">
-                  Jagdamb<span className="text-[#2A2521] ml-1 font-sans font-medium text-lg sm:text-xl">Foods</span>
-                </span>
-                <span className="text-[9px] uppercase tracking-widest text-[#7D746D] font-medium mt-0.5">
-                  Heritage Confectionery • Est. 2004
+                <div className="flex items-baseline gap-1">
+                  <span className="font-serif text-2xl sm:text-2xl font-bold tracking-tight text-[#8B263E] leading-none">
+                    Jagdamb
+                  </span>
+                  <span className="text-[#2A2521] font-sans font-medium text-lg sm:text-xl leading-none">
+                    Foods
+                  </span>
+                </div>
+                <span className="text-[9.5px] uppercase tracking-widest text-[#7D746D] font-semibold mt-0.5 flex items-center gap-1">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#D4A373]" />
+                  Pure Taste • True Tradition
                 </span>
               </div>
             </Link>
