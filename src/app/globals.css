@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Jost:ital,wght@0,300..900;1,300..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #C0392B;
+  --color-primary-dark: #A42325;
+  --color-primary-deep: #780406;
+  --color-gold: #D4A373;
+  --color-cream-bg: #FAF5EC;
+  --color-ivory: #FFFDF9;
+  --color-charcoal: #1F1F1F;
+  --color-card-border: #EADBCE;
+  --font-serif: 'Fraunces', Georgia, serif;
+  --font-sans: 'Jost', system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #FAF5EC;
+  color: #1F1F1F;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography Enhancements */
+h1, h2, h3, h4, .font-serif-heading {
+  font-family: var(--font-serif);
+  letter-spacing: -0.01em;
+}
+
+/* Kataria-style ornamental decorative flourish */
+.ornament-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 14px auto;
+}
+
+.ornament-divider::before,
+.ornament-divider::after {
+  content: "";
+  height: 1px;
+  width: 70px;
+  background: linear-gradient(90deg, transparent, #C0392B, transparent);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF5EC;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C0392B;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #780406;
+}
+
+/* Shimmer Animation for Badges and Highlights */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+.animate-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.animate-shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  animation: shimmer 2.5s infinite;
+}
+
+/* Floating animation */
+@keyframes gentle-float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+}
+
+.animate-gentle-float {
+  animation: gentle-float 4s ease-in-out infinite;
+}
+
+/* Pulse Glow */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(192, 57, 43, 0.2), 0 0 30px rgba(212, 163, 115, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(192, 57, 43, 0.4), 0 0 45px rgba(212, 163, 115, 0.35);
+  }
+}
+
+.animate-glow {
+  animation: pulse-glow 3s infinite;
+}
+
+/* Pill Badges */
+.badge-sale {
+  background: linear-gradient(135deg, #C0392B 0%, #A42325 100%);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  display: inline-block;
+  box-shadow: 0 2px 8px rgba(192, 57, 43, 0.3);
+}
+
+/* Kataria Button Styles with Micro-interactions */
+.btn-primary-kataria {
+  background: linear-gradient(135deg, #C0392B 0%, #A42325 100%);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.875rem;
+  padding: 13px 30px;
+  border-radius: 9999px;
+  box-shadow: 0 4px 16px rgba(192, 57, 43, 0.35);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid #A42325;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary-kataria:hover {
+  background: #780406;
+  box-shadow: 0 8px 24px rgba(120, 4, 6, 0.45);
+  transform: translateY(-2px);
+}
+
+.btn-primary-kataria:active {
+  transform: translateY(0);
+}
+
+.btn-secondary-kataria {
+  background: #FAF5EC;
+  color: #1F1F1F;
+  border: 1.5px solid #C0392B;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.875rem;
+  padding: 13px 30px;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.btn-secondary-kataria:hover {
+  background: #C0392B;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(192, 57, 43, 0.25);
+}
+
+/* Product Card Kataria Style */
+.kataria-card {
+  background: #FFFDF9;
+  border: 1px solid #EADBCE;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  position: relative;
+}
+
+.kataria-card:hover {
+  border-color: #C0392B;
+  box-shadow: 0 14px 32px rgba(192, 57, 43, 0.15);
+  transform: translateY(-5px);
+}
+
+/* Infinite Marquee Ticker */
+@keyframes marquee-left {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: 200%;
+  animation: marquee-left 28s linear infinite;
+}
+
+.animate-marquee-reverse {
+  display: flex;
+  width: 200%;
+  animation: marquee-right 28s linear infinite;
+}
+
+.animate-marquee:hover, .animate-marquee-reverse:hover {
+  animation-play-state: paused;
+}
